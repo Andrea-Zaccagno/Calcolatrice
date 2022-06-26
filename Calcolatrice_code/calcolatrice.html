@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/calcolatrice_Style.css">
+
+        <!--  FONT Pulsanti Numerici  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+        <!-- fine -->
+
+        <!--  FONT Pulsanti Operatori  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+         <!-- fine -->
+
+        <title>Calcolatrice</title>        
+    </head>
+
+    <body>
+
+        <div class="container" id="calcolatrice">
+
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <input type="text" id="schermo" readonly>                       
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col" id="griff">
+                    T - 800                  
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <input type="button" class="cifre" value="7" onclick="scrivi_Cifra(7)"> 
+                    <input type="button" class="cifre" value="8" onclick="scrivi_Cifra(8)">
+                    <input type="button" class="cifre" value="9" onclick="scrivi_Cifra(9)">
+                    <input type="button" class="operatori" value="+" onclick="Somma()">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <input type="button" class="cifre" value="4" onclick="scrivi_Cifra(4)">
+                    <input type="button" class="cifre" value="5" onclick="scrivi_Cifra(5)">
+                    <input type="button" class="cifre" value="6" onclick="scrivi_Cifra(6)">
+                    <input type="button" class="operatori" value="-" onclick="Sottrazione()">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <input type="button" class="cifre" value="1" onclick="scrivi_Cifra(1)">
+                    <input type="button" class="cifre" value="2" onclick="scrivi_Cifra(2)">
+                    <input type="button" class="cifre" value="3" onclick="scrivi_Cifra(3)">
+                    <input type="button" class="operatori" value="x" onclick="Moltiplicazione()">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <input type="button" class="operatori" value="." onclick="scrivi_Cifra('.')">
+                    <input type="button" class="cifre" value="0" onclick="scrivi_Cifra(0)">
+                    <input type="button" class="operatori" value="&divide" onclick="Divisione_Intera()">
+                    <input type="button" class="operatori" value="/" onclick="Divisione()">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <input type="button" class="operatori" id="canc" value="CANC" onclick="Reset()">
+                    <input type="button" class="operatori" id="uguale" value="=" onclick="Calcola()">
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <script src="JavaScript\calcolatrice.js"></script>
+        <script src="JavaScript\calcolatrice_.js"></script>
+    </body>
+</html>
